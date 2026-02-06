@@ -44,12 +44,13 @@ function secondlargestelemt(arr){
 }
 let arr=[1,2,3,5,7,4,9];
 console.log(secondlargestelemt(arr))
-
+// finding the target element in the array and return its index
 function findelement(arr,target){
    for(let i=0;i<arr.length;i++){
     if(arr[i]==target){
        return i;
     }
    }
+   return -1;
 }
 console.log(findelement([1,2,3,4,5,6],4))
