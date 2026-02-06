@@ -21,3 +21,26 @@ function counteven(arr){
   return count;
 }
 console.log(counteven([1,2,3,4]));
+
+function secondlargestelemt(arr){
+    if(!arr || arr.length<2){
+        return "second elemt is not posible"
+    }
+    let firstlargest=-Infinity;
+    let secondlargest=-Infinity;
+    for(let num of arr){
+        if(num >firstlargest){
+            secondlargest=firstlargest;
+            firstlargest=num;
+            
+            
+        }else if(num >secondlargest && num !=firstlargest){
+            secondlargest=num;
+            
+        }
+    }
+    return secondlargest;
+    
+}
+let arr=[1,2,3,5,7,4,9];
+console.log(secondlargestelemt(arr))
