@@ -4,3 +4,8 @@ for(let i=0;i<3;i++){
     console.log("hello world");
   }
 }
+for(let i=0;i<5;i++){
+  for(let j=0;j<=i;j++){
+    console.log("x");
+  }
+}
