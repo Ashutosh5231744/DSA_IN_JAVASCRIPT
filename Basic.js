@@ -70,3 +70,41 @@ function countdigits(num){
 }
 console.log(countdigits(12345));
 
+//check if a number is palindrome or not by pointers
+
+function palindrome(num){
+    let str=num.toString();   //indexing is not allow on a number so we convert it to the String
+    if(num<0){
+        return false;  // edge cases 
+    }
+    let i=0;
+    let j=str.length-1;
+    while(i<j){
+        if(str[i]==str[j]){
+            i++;
+            j--;
+        }else{
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(palindrome(12344321));
+
+// check the number is palindrome or not by reversing the number 
+function palindrome(num){
+    let rev=0;
+    let original=num;
+    while(num>0){
+        let remainder=num%10;
+        rev=rev*10+remainder;
+        num=Math.floor(num/10);
+    }
+    if(original==rev){
+        return true;
+    }
+    return false;
+}
+
+console.log(palindrome(12344321));
