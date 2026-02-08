@@ -54,3 +54,19 @@ function findelement(arr,target){
    return -1;
 }
 console.log(findelement([1,2,3,4,5,6],4))
+
+// count the number of digits in a number 
+function countdigits(num){
+  let count =0;
+  while(num>0){
+    num=Math.abs(num); // Handles negatives numbers
+    if(num==0){        // handles the case when num is 0
+      return 1;
+    }
+    num=Math.floor(num/10); // Handles decimal number 
+    count++;
+  }
+  return count;
+}
+console.log(countdigits(12345));
+
