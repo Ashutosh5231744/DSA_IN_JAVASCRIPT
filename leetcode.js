@@ -22,3 +22,17 @@ while(x>0){
 
     
 };
+
+// problem number 26 leetcode Remove Duplicate from the sorted array
+var removeDuplicates = function(nums) {
+    let i=0;
+    for(let j=i+1; j<nums.length; j++){
+        if(nums[j]!==nums[i]){
+             i++;
+            nums[i]=nums[j];
+           
+        }
+    }
+    return i+1;
+    
+};
