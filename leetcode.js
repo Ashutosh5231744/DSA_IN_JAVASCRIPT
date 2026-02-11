@@ -52,3 +52,17 @@ var removeElement=function(nums,val){
      return k;
 
 }
+
+
+// Problem number 377 reverse String 
+var reverseString=function(s){
+    let i=0;
+    let j=s.length-1;
+    while(i<j){
+         [s[i],s[j]]=[s[j],s[j]];
+         i++
+         j--;
+    }
+    
+    
+}
