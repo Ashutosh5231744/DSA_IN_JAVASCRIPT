@@ -36,3 +36,19 @@ var removeDuplicates = function(nums) {
     return i+1;
     
 };
+// Problem number 27 leetcode Remove Element
+ 
+var removeElement=function(nums,val){
+    nums.sort((a,b)=>a-b);
+    
+    let k=0;
+     for(let i=0;i<nums.length;i++){
+        if(nums[i]!=val){
+           
+            nums[k]=nums[i];
+            k++;
+        }
+     }
+     return k;
+
+}
