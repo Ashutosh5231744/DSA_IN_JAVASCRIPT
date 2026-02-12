@@ -108,3 +108,20 @@ var moveZeroes = function(nums) {
     return nums;
     
 };
+
+var findmaximumConsecutiveseones=function(nums){
+    let count=0;
+    let maximumcount=0;
+    for(let i=0;i<nums.length;i++){
+        if(nums[i]===1){
+            count++;
+            maximumcount=Math.max(maximumcount,count);
+        }
+        else{
+            count=0
+        }
+        j++;
+    }
+    return maximumcount;
+
+}
