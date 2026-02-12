@@ -66,3 +66,45 @@ var reverseString=function(s){
     
     
 }
+
+// merge two sorted array
+var merge = function(nums1, m, nums2, n) {
+    let i=0;
+    while(i<m){
+        i++;
+    }
+   for(let num2 of nums2){
+    nums1[i]=num2
+    i++;
+   }
+    nums1.sort((a,b)=>a-b)
+    return nums1;
+    
+};
+
+// move zeroes to the end of the array
+var moveZeroes = function(nums) {
+    let count =0;
+    for(let i=0;i<nums.length;i++){
+        if(nums[i]===0){
+            count++;
+        }
+    }
+    let index=0;
+    for(let i=0;i<nums.length;i++){
+        if(nums[i]!==0){
+            nums[index]=nums[i];
+            index++;
+        }
+    }
+    let j=nums.length-1;
+
+    while(count >0){
+        nums[j]=0
+        j--;
+        count--;
+
+    }
+    return nums;
+    
+};
