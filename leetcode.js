@@ -125,3 +125,15 @@ var findmaximumConsecutiveseones=function(nums){
     return maximumcount;
 
 }
+// problem number 268 mising number 
+var misingNumber=function(nums){
+    let n=nums.length;
+    let total=0;
+    for(let i=0;i<=n;i++){
+        total+=1;
+    }
+    for(let num of nums){
+        total-=num;
+    }
+    return total;
+}
