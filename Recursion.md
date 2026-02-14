@@ -52,3 +52,27 @@ function f1(n){
 }
 f1(5)
 console.log(sum)
+
+
+# small version of this code 
+let sum=0;
+function f1(n){
+  if(n===0){
+    return
+  }
+  sum+=n;
+  f1(n-1)
+}
+f1(5)
+
+
+# sum of all number in an array
+note -> in the array we have to mange the indexes so thats why manage the index seprately that make easy to sense
+
+function sumofarray(arr,i){
+  if(i>=arr.length){
+    return 0;
+  }
+  return arr[i]+sumofarray(arr,i+1)
+}
+sumofarray([1,2,3,4,5],0)
