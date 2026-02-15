@@ -76,3 +76,73 @@ function sumofarray(arr,i){
   return arr[i]+sumofarray(arr,i+1)
 }
 sumofarray([1,2,3,4,5],0)
+
+# sum of all even number in an array 
+function f1(arr,i){
+  if(i>=arr.length){
+     return 0;
+  }
+  if(arr[i]%2===0){
+    return arr[i]+f1(arr,i+1);
+  }else{
+   return f1(arr,i+1)
+  }
+}
+console.log(f1([1,2,3,4,5],0))
+
+# sum of all odd number in an array 
+function f1(arr,i){
+  if(i>=arr.length){
+    return 0;
+  }
+  if(arr[i]%2!==0){
+    return arr[i]+f1(arr,i+1)
+  }else{
+    return f1(arr,i+1);
+  }
+}
+console.log(f1([1,2,3,4,5],0))
+
+
+# sum of all element in the even index 
+function f1(arr,i){
+  if(i>=arr.length){
+    return 0;
+  }
+    return arr[i]+f1(arr,i+2);
+}
+console.log(f1([1,2,3,4,5],0))
+
+# sum of all the element in the odd position 
+function f1(arr,i){
+  if(i>=arr.length){
+    return 0;
+
+  }
+  return arr[i]+f1(arr,i+2)
+}
+console.log(f1([1,2,3,4,5],1))
+
+
+# factorial of number 
+function factorial(n){
+  if(n===0){
+    return 1;
+  }
+  return n*factorial(n-1);
+}
+console.log(factorial(5));
+
+
+# check if the number is in the power of two
+
+function poweroftwo(n){
+  if(n===1){
+    return true;
+  }
+   if(n<=0 || n%2!==0){
+    return false;
+   }
+   return poweroftwo(n/2);
+}
+console.log(poweroftwo(6));
