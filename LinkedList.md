@@ -50,5 +50,125 @@ let list= new mylinkedlist();
 list.head=node1;
 node1.next=node2;
 
+// leetcode 707
+
+function Node(val){
+    this.val=val;
+    this.next=null;
+}
+let MyLinkedList=function(){
+    this.head=null;
+    this.size=0;
+}
+
+/** 
+ * @param {number} index
+ * @return {number}
+ */
+MyLinkedList.prototype.get = function(index) {
+    if(index <0 || index>=this.size){
+        return -1
+    }
+    let current=this.head;
+    let count=0;
+    while(count <index){
+        current=current.next;
+        count++
+    }
+    return current.val;
+
+    
+   
+      
+};
+
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtHead = function(val) {
+    let node1= new Node(val);
+    node1.next=this.head;
+    this.head=node1;
+    this.size++;
+    
+
+    
+};
+
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtTail = function(val) {
+    let node2=new Node(val);
+    if(this.head===null){
+        this.head=node2
+    }
+    else{
+        let current=this.head;
+    while(current.next!=null){
+        current=current.next;
+    }
+    current.next=node2;
+
+    }
+    this.size++;
+    
+};
+
+/** 
+ * @param {number} index 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtIndex = function(index, val) {
+    if(index >this.size){
+        return
+    }
+    if(index===0){
+        this.addAtHead(val);
+
+        return;
+    }
+    let node3= new Node(val)
+    let current=this.head;
+    let count=0;
+    while(count<index-1){
+        current=current.next;
+        count++
+    }
+    node3.next=current.next;
+    current.next=node3;
+    this.size++
+  
+};
+
+/** 
+ * @param {number} index
+ * @return {void}
+ */
+MyLinkedList.prototype.deleteAtIndex = function(index) {
+    if(index<0 || index>=this.size){
+        return;
+    }
+   if(index===0){
+    this.head=this.head.next
+    this.size--;
+    return
+   }
+
+
+    let current=this.head;
+    let count=0;
+    while(count <index-1){
+        current=current.next
+        count++
+    }
+    current.next=current.next.next
+    this.size--;
+};
+
+
 
 
