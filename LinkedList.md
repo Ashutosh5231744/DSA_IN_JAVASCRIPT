@@ -28,6 +28,27 @@ Memory efficient storage for static size ->Array
 Avoiding sizing and dynamics unknow input size ->linkedlist
 doing alot of traversl technique than use ->linkedlist
 
+// te tumne bluePrint bna liya
+function Node(val){
+  this.val=val;
+  this.next=null;
+}
+
+// ye tumne Register bna liya 
+let mylinkedlist=function(){
+  this.head=null;
+  this.size=0;
+}
+
+//
+let node1=new Node(10);
+let node2= new Node(20);
+
+// ye tumne Acces liya mylinkedlist function se actuall linkedlist bnana k liye 
+let list= new mylinkedlist();
+
+list.head=node1;
+node1.next=node2;
 
 
 
