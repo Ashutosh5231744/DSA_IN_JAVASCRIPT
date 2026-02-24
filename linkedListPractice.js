@@ -26,4 +26,26 @@ var reverseList = function(head) {
     return head;
     
 };
+// getting  the ibntersection of two linkedlist 
+var getIntersection = function(headA, headB){
 
+    let a1 = headA;
+    let seenLinkedlist = new Set();
+
+    // store all nodes of first list
+    while(a1){
+        seenLinkedlist.add(a1);
+        a1 = a1.next;
+    }
+
+    // check second list
+    let a2 = headB;
+    while(a2){
+        if(seenLinkedlist.has(a2)){
+            return a2;
+        }
+        a2 = a2.next;
+    }
+
+    return null;
+}
