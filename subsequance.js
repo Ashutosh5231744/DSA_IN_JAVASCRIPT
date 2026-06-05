@@ -69,4 +69,60 @@ console.log(ans );
 
 
 
+function printAnysubsequance(arr, index, n,  sum, temp, k ){
+  if(index ===n){
+ if (sum==k){
+    console.log([...temp])
+    return true;
+  }
+  return false;
+  }
+ // take 
+ temp.push(arr[index]);
+ if(printAnysubsequance(arr, index+1, n,  sum+arr[index], temp, k )){
+  return true;
+ }
+ temp.pop();
+ // not taken 
+ if(printAnysubsequance(arr, index+1, n,  sum, temp, k )){
+  return true;
+ }
+ return false ;
+}
+let arr=[1,2,1];
+let n=arr.length;
+let sum=0
+let temp=[];
+
+let ans = printAnysubsequance(arr, 0, n,  sum, temp, 2 )
+console.log(ans );
+
+
+function countSubsequanceswithsumK(arr,index,n,sum,temp,k){
+
+  // Base cases 
+  if(index ===n){
+    if(sum===k){
+      return 1 
+    }
+    return 0;
+  }
+  // taken 
+  temp.push(arr[index]);
+  let taken =countSubsequanceswithsumK(arr,index+1,n,sum+arr[index],temp,k);
+  temp.pop();
+
+  //not taken 
+  let nottaken=countSubsequanceswithsumK(arr,index+1,n,sum,temp,k)
+  return taken +nottaken;
+
+
+}
+
+let arr=[1,2,1]
+let n=arr.length;
+let temp=[];
+
+console.log(countSubsequanceswithsumK(arr,0,n,0,temp,2))
+
 
