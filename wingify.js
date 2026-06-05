@@ -29,19 +29,34 @@
 // console.log(ans);
 
 
-function movingnZERO(arr){
-   // storing non zero element in to a seprate array
-     let temp=[];
-     for(let num of arr){
-      if(num!==0){
-         temp.push(num);
-      }
-     }
-     while(temp.length<arr.length){
-      temp.push(0);
-     }
-     return temp;
-}
-let ans=movingnZERO([1,2,0,0,0,4,0]);
-console.log(ans);
+// function movingnZERO(arr){
+//    // storing non zero element in to a seprate array
+//      let temp=[];
+//      for(let num of arr){
+//       if(num!==0){
+//          temp.push(num);
+//       }
+//      }
+//      while(temp.length<arr.length){
+//       temp.push(0);
+//      }
+//      return temp;
+// }
+// let ans=movingnZERO([1,2,0,0,0,4,0]);
+// console.log(ans);
+
+// function union(arr1,arr2){
+//    let set=new Set();
+//    for(let num of arr1){
+//       set.add(num)
+//    }
+//    for( let num2 of arr2){
+//       set.add(num2)
+//    }
+//    return [...set];
+
+// }
+// let ans= union([1,2,3,4,5],[2,3,4,5,6])
+// console.log(ans);
+
 
