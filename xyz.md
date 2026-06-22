@@ -74,6 +74,17 @@ index 1
  sum=2 == k
    print temp;
 
+     0 index    1 index       2 index           3 index 
+   // 1--------->2-------------->3---------------->4
+
+let suppose we have to add at 2 index 
+
+so we have to moce at just one place lest to the index  basically index-1;
+
+let suppose we have to add 5 at index 2
+ 1----------->2--------->5--------------->3------------------->4
 
 
-
+fast                                fast                                          fast
+1--------------->2------------------>3------------------->4---------------------->5
+slow         slow                   slow

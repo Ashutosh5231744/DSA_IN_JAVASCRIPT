@@ -97,7 +97,7 @@ let temp=[];
 let ans = printAnysubsequance(arr, 0, n,  sum, temp, 2 )
 console.log(ans );
 
-
+// count the subsequance with sum equal to k 
 function countSubsequanceswithsumK(arr,index,n,sum,temp,k){
 
   // Base cases 
