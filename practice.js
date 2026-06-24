@@ -85,3 +85,110 @@ function checkShorted(arr){
 }
 let ans4=checkShorted([1,2,3,4,5,1]);
 console.log(ans4);
+
+function MoveZero(arr){
+  let ans5 =[];
+  let count =0;
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]!=0){
+      ans5.push(arr[i]);
+    }else{
+      count++
+    }
+  }
+  while(count >0){
+    ans5.push(0)
+    count--;
+  }
+  return ans5;
+
+}
+let ans6= MoveZero([1,2,3,40,0,0,5,7,9]);
+console.log(ans6);
+
+function LinearSearch(arr, target){
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]==target){
+      return i;
+    }
+  }
+  return -1
+  
+}
+let ans7=LinearSearch([1,2,3,4,5],3);
+console.log(ans7);
+
+
+function finduniqueElemnet(arr){
+  for(let i=0;i<arr.length;i++){
+    let count=0;
+    for(let j=0;j<arr.length;j++){
+      if(arr[i]==arr[j])
+        count++;
+    }
+     if(count==1){
+    return arr[i];
+  }
+  }
+ 
+}
+let ans8=finduniqueElemnet([1,2,3,4,1,2,3,]);
+console.log(ans8);
+
+
+function short(arr){
+  let zero=0;
+  let one=0;
+  let two=0;
+  let ans9=[];
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]==0){
+      zero++
+    }
+    else if(arr[i]==1){
+      one++
+    }else{
+      two++
+    }
+  }
+  while(zero){
+    ans9.push(0)
+    zero--;
+  }
+  while(one){
+    ans9.push(1);
+    one--;
+  }
+  while(two){
+    ans9.push(2)
+    two--;
+  }
+  return ans9;
+
+}
+let ans10=short([1,2,0,1,0,2,0,0,0,1,]);
+console.log(ans10);
+
+function MaximumElements(arr){
+  let freq={};
+  for(let i=0;i<arr.length;i++){
+    if(freq[arr[i]]){
+      freq[arr[i]]++
+    }else{
+      freq[arr[i]]=1;
+    }
+  }
+  let maxfreq=0;
+  let ans;
+  for(let key in freq){
+    if(freq[key] >maxfreq){
+      maxfreq=freq[key];
+      ans=key;
+    }
+
+
+  }
+  return ans;
+}
+let ans11=MaximumElements([1,2,3,4,4,4,4,2,2,2,2,2,2,2,2,,1,1,1,1,1,1,1,,3,3,3,3,1,2]);
+console.log(ans11);
