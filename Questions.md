@@ -10,6 +10,10 @@
 9.find the unique number that appear once
 10.Shorts 0,1,2
 11.Maximum elements
+12.Leader in an Array
+13.Rearrange Elements by its sign 
+
+
 
 
 

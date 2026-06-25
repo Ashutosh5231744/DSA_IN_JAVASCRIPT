@@ -192,3 +192,58 @@ function MaximumElements(arr){
 }
 let ans11=MaximumElements([1,2,3,4,4,4,4,2,2,2,2,2,2,2,2,,1,1,1,1,1,1,1,,3,3,3,3,1,2]);
 console.log(ans11);
+
+// There is a bug in this solution
+// function LeaderINArray(arr){
+//   let leader=[];
+//   for(let i=0;i<arr.length;i++){
+//     for(let j=i+1;j<arr.length;j++){
+//       if(arr[j] > arr[i]){
+//         break;
+//       }
+//     }
+//     leader.push(arr[i]);
+//   }
+//   return leader;
+// }
+// let ans13=LeaderINArray([4,7,1,0]);
+// console.log(ans13);
+
+// Another Approach to solve it 
+function Leader(arr){
+  let leader=[];
+  let max=arr[arr.length-1];
+  for(let i=arr.length-2;i>=0;i--){
+    if(arr[i] >=max){
+      max=arr[i];
+      leader.push(arr[i]);
+
+    }
+  }
+  return leader;
+}
+let ans13=Leader([4,3,7,1,0]);
+console.log(ans13);
+
+function Rearrange(arr){
+  let positive=[];
+   let negative=[];
+   let result=[];
+   for(let i=0;i<arr.length;i++){
+    if(arr[i] <0){
+       negative.push(arr[i]);
+
+    }else{
+      positive.push(arr[i]);
+    }
+   }
+   let i=0;
+   let j=0;
+   while(i<positive.length && j<negative.length){
+    result.push(positive[i]);
+    result.push(negative[i]);
+    i++;
+    j++;
+   }
+   return result;
+}
